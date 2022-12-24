@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=north": {
+			"model": "mtr:block/lift_buttons_2"
+		},
+		"facing=east": {
+			"model": "mtr:block/lift_buttons_2",
+			"y": 90
+		},
+		"facing=south": {
+			"model": "mtr:block/lift_buttons_2",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "mtr:block/lift_buttons_2",
+			"y": 270
+		}
+	}
+}

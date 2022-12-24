@@ -1,0 +1,96 @@
+loom {
+	forge {
+		mixinConfig "mtr.mixins.json"
+	}
+}
+
+architectury {
+	platformSetupLoomIde()
+	forge()
+}
+
+configurations {
+	common
+	shadowCommon
+	compileClasspath.extendsFrom common
+	runtimeClasspath.extendsFrom common
+	developmentForge.extendsFrom common
+}
+
+dependencies {
+	forge "net.minecraftforge:forge:${rootProject.forge_version}"
+	modApi "${rootProject.architectury_id}:architectury-forge:${rootProject.architectury_version}"
+
+	common(project(path: ":common", configuration: "namedElements")) { transitive false }
+	shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("META-INF/mods.toml") {
+		expand "version": project.version
+	}
+}
+
+shadowJar {
+	exclude "fabric.mod.json"
+
+	configurations = [project.configurations.shadowCommon]
+	classifier "dev-shadow"
+	relocate "javax.servlet", "mtr.libraries.javax.servlet"
+	relocate "org.eclipse", "mtr.libraries.org.eclipse"
+}
+
+remapJar {
+	input.set shadowJar.archiveFile
+	dependsOn shadowJar
+	classifier null
+}
+
+components.java {
+	withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+		skip()
+	}
+}
+
+task moveForgeBuilds() {
+	doLast {
+		delete fileTree("../build/release").matching {
+			include "**/${rootProject.variation_header}-forge*"
+		}
+		delete fileTree("../build/libs").matching {
+			include "**/${rootProject.variation_header}-forge*"
+		}
+		delete fileTree("../build/latest").matching {
+			include "**/${rootProject.variation_header}-forge*"
+		}
+		copy {
+			from "build/libs"
+			include "*${rootProject.mod_version}.jar"
+			into "../build/release"
+			rename "(.+)", "${rootProject.variation_header}-\$1"
+		}
+		if (rootProject.variation == "normal") {
+			copy {
+				from "build/libs"
+				into "../build/latest"
+				rename { fileName -> "MTR-${fileName.replace(rootProject.mod_version, "latest")}" }
+			}
+			copy {
+				from "build/libs"
+				include "*${rootProject.mod_version}-dev-shadow.jar"
+				into "../build/libs"
+				rename "(.+)", "MTR-\$1"
+			}
+		}
+	}
+}
+
+afterEvaluate {
+	for (def task in it.tasks) {
+		if (task == tasks.build) {
+			task.finalizedBy tasks.moveForgeBuilds
+		}
+	}
+}
