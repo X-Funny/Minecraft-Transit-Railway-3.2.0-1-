@@ -13,8 +13,8 @@ public class BlockPIDS4 extends BlockPIDSBase {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
-		VoxelShape shape1 = IBlock.getVoxelShapeByDirection(6, 0, 0, 10, 10, 16, IBlock.getStatePropertySafe(state, FACING));
-		VoxelShape shape2 = IBlock.getVoxelShapeByDirection(7.5, 10, 12.5, 8.5, 16, 13.5, IBlock.getStatePropertySafe(state, FACING));
+		VoxelShape shape1 = IBlock.getVoxelShapeByDirection(6, 0, 0, 10, 11, 16, IBlock.getStatePropertySafe(state, FACING));
+		VoxelShape shape2 = IBlock.getVoxelShapeByDirection(7.5, 11, 12.5, 8.5, 16, 13.5, IBlock.getStatePropertySafe(state, FACING));
 		return Shapes.or(shape1, shape2);
 	}
 
@@ -25,7 +25,7 @@ public class BlockPIDS4 extends BlockPIDSBase {
 
 	public static class TileEntityBlockPIDS4 extends TileEntityBlockPIDSBase {
 
-		public static final int MAX_ARRIVALS = 2;
+		public static final int MAX_ARRIVALS = 4;
 
 		public TileEntityBlockPIDS4(BlockPos pos, BlockState state) {
 			super(BlockEntityTypes.PIDS_4_TILE_ENTITY.get(), pos, state);
