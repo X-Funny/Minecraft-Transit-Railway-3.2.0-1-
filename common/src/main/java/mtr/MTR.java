@@ -214,6 +214,7 @@ public class MTR implements IPacket {
 			registerBlockItem.accept("pids_1", Blocks.PIDS_1, CreativeModeTabs.RAILWAY_FACILITIES);
 			registerBlockItem.accept("pids_2", Blocks.PIDS_2, CreativeModeTabs.RAILWAY_FACILITIES);
 			registerBlockItem.accept("pids_3", Blocks.PIDS_3, CreativeModeTabs.RAILWAY_FACILITIES);
+			registerBlockItem.accept("pids_4", Blocks.PIDS_4, CreativeModeTabs.RAILWAY_FACILITIES);
 			registerBlockItem.accept("pids_pole", Blocks.PIDS_POLE, CreativeModeTabs.RAILWAY_FACILITIES);
 			registerBlockItem.accept("platform", Blocks.PLATFORM, CreativeModeTabs.STATION_BUILDING_BLOCKS);
 			registerBlockItem.accept("platform_indented", Blocks.PLATFORM_INDENTED, CreativeModeTabs.STATION_BUILDING_BLOCKS);
