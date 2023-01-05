@@ -3,6 +3,7 @@ package mtr;
 import mtr.block.BlockPIDS1;
 import mtr.block.BlockPIDS2;
 import mtr.block.BlockPIDS3;
+import mtr.block.BlockPIDS4;
 import mtr.block.BlockTactileMap;
 import mtr.client.ClientData;
 import mtr.client.Config;
@@ -189,7 +190,7 @@ public class MTRClient implements IPacket {
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_1_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDS1.TileEntityBlockPIDS1.MAX_ARRIVALS, 1, 3.25F, 6, 2.5F, 30, true, false, PIDSType.PIDS, 0xFF9900, 0xFF9900));
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_2_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDS2.TileEntityBlockPIDS2.MAX_ARRIVALS, 1.5F, 7.5F, 6, 6.5F, 29, true, true, PIDSType.PIDS, 0xFF9900, 0xFF9900));
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_3_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDS3.TileEntityBlockPIDS3.MAX_ARRIVALS, 2.5F, 7.5F, 6, 6.5F, 27, true, false, PIDSType.PIDS, 0xFF9900, 0x33CC00, 1.25F, true));
-			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_4_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDS4.TileEntityBlockPIDS3.MAX_ARRIVALS, 2.5F, 10F, 6, 6.5F, 29, true, true, PIDSType.PIDS, 0xFF0000, 0xFF9900));
+			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_4_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDS4.TileEntityBlockPIDS4.MAX_ARRIVALS, 2.5F, 10F, 6, 6.5F, 29, true, true, PIDSType.PIDS, 0xFF0000, 0xFF9900));
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.RAILWAY_SIGN_2_EVEN_TILE_ENTITY.get(), RenderRailwaySign::new);
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.RAILWAY_SIGN_2_ODD_TILE_ENTITY.get(), RenderRailwaySign::new);
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.RAILWAY_SIGN_3_EVEN_TILE_ENTITY.get(), RenderRailwaySign::new);
