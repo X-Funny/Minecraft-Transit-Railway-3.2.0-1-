@@ -9,7 +9,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class BlockPIDS4 extends BlockPIDSBase {
+public class BlockPIDSUCENANLING extends BlockPIDSBase {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
@@ -20,7 +20,7 @@ public class BlockPIDS4 extends BlockPIDSBase {
 
 	@Override
 	public BlockEntityMapper createBlockEntity(BlockPos pos, BlockState state) {
-		return new TileEntityBlockPIDS4(pos, state);
+		return new TileEntityBlockPIDSUCENANLING(pos, state);
 	}
 
 	public static class TileEntityBlockPIDS4 extends TileEntityBlockPIDSBase {
