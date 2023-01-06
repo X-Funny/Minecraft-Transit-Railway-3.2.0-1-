@@ -55,6 +55,7 @@ public interface Blocks {
 	RegistryObject<Block> PIDS_3 = new RegistryObject<>(BlockPIDS3::new);
 	RegistryObject<Block> PIDS_UCE_NANLING = new RegistryObject<>(BlockPIDSUCENANLING::new);
 	RegistryObject<Block> PIDS_UCE_NANGANG = new RegistryObject<>(BlockPIDSUCENANGANG::new);
+	RegistryObject<Block> PIDS_UCE_YEZHOU = new RegistryObject<>(BlockPIDSUCEYEZHOU::new);
 	RegistryObject<Block> PIDS_POLE = new RegistryObject<>(() -> new BlockPIDSPole(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(1)));
 	RegistryObject<Block> PLATFORM = new RegistryObject<>(() -> new BlockPlatform(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(2), false));
 	RegistryObject<Block> PLATFORM_INDENTED = new RegistryObject<>(() -> new BlockPlatform(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(2).noOcclusion(), true));
