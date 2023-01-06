@@ -23,7 +23,7 @@ public class BlockPIDSUCENANLING extends BlockPIDSBase {
 		return new TileEntityBlockPIDSUCENANLING(pos, state);
 	}
 
-	public static class TileEntityBlockPIDS4 extends TileEntityBlockPIDSBase {
+	public static class TileEntityBlockPIDSUCENANLING extends TileEntityBlockPIDSBase {
 
 		public static final int MAX_ARRIVALS = 4;
 
