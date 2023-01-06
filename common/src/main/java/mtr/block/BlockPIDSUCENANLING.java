@@ -27,8 +27,8 @@ public class BlockPIDSUCENANLING extends BlockPIDSBase {
 
 		public static final int MAX_ARRIVALS = 4;
 
-		public TileEntityBlockPIDS4(BlockPos pos, BlockState state) {
-			super(BlockEntityTypes.PIDS_4_TILE_ENTITY.get(), pos, state);
+		public TileEntityBlockPIDSUCENANLING(BlockPos pos, BlockState state) {
+			super(BlockEntityTypes.PIDS_UCE_NANLING_TILE_ENTITY.get(), pos, state);
 		}
 
 		@Override
