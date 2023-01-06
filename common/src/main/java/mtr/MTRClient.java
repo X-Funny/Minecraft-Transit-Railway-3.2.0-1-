@@ -191,6 +191,7 @@ public class MTRClient implements IPacket {
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_2_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDS2.TileEntityBlockPIDS2.MAX_ARRIVALS, 1.5F, 7.5F, 6, 6.5F, 29, true, true, PIDSType.PIDS, 0xFF9900, 0xFF9900));
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_3_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDS3.TileEntityBlockPIDS3.MAX_ARRIVALS, 2.5F, 7.5F, 6, 6.5F, 27, true, false, PIDSType.PIDS, 0xFF9900, 0x33CC00, 1.25F, true));
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_UCE_NANLING_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDSUCENANLING.TileEntityBlockPIDSUCENANLING.MAX_ARRIVALS, 2.5F, 10F, 6, 6.5F, 27, true, true, PIDSType.PIDS, 0xFF0000, 0xFF9900));
+			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.PIDS_UCE_NANGANG_TILE_ENTITY.get(), dispatcher -> new RenderPIDS<>(dispatcher, BlockPIDSUCENANGANG.TileEntityBlockPIDSUCENANGANG.MAX_ARRIVALS, 2.5F, 10F, 6, 6.5F, 29, true, true, PIDSType.PIDS, 0xFFFF00, 0xFF0000));
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.RAILWAY_SIGN_2_EVEN_TILE_ENTITY.get(), RenderRailwaySign::new);
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.RAILWAY_SIGN_2_ODD_TILE_ENTITY.get(), RenderRailwaySign::new);
 			RegistryClient.registerTileEntityRenderer(BlockEntityTypes.RAILWAY_SIGN_3_EVEN_TILE_ENTITY.get(), RenderRailwaySign::new);
