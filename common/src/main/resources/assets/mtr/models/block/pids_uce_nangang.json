@@ -1,0 +1,80 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"2": "mtr:block/nanganginfomation",
+		"back": "mtr:block/black",
+		"particle": "mtr:block/metal"
+	},
+	"elements": [
+		{
+			"name": "Main",
+			"from": [6, 2.75, 0],
+			"to": [10, 11.25, 15],
+			"faces": {
+				"east": {"uv": [0, 5, 16, 16], "texture": "#particle"},
+				"south": {"uv": [6, 5, 10, 16], "texture": "#particle", "cullface": "south"},
+				"west": {"uv": [0, 5, 16, 16], "texture": "#particle"},
+				"up": {"uv": [6, 0, 10, 16], "texture": "#particle"},
+				"down": {"uv": [6, 0, 10, 16], "texture": "#particle", "cullface": "down"}
+			}
+		},
+		{
+			"name": "Pole",
+			"from": [7.5, 13, 12.5],
+			"to": [8.5, 16, 13.5],
+			"faces": {
+				"north": {"uv": [7.5, 0, 8.5, 5], "texture": "#particle"},
+				"east": {"uv": [2.5, 0, 3.5, 5], "texture": "#particle"},
+				"south": {"uv": [7.5, 0, 8.5, 5], "texture": "#particle"},
+				"west": {"uv": [12.5, 0, 13.5, 5], "texture": "#particle"},
+				"up": {"uv": [7.5, 12.5, 8.5, 13.5], "texture": "#particle", "cullface": "up"}
+			}
+		},
+		{
+			"name": "Background",
+			"from": [5.95, 8.9, 0],
+			"to": [10.05, 10.275, 14],
+			"faces": {
+				"east": {"uv": [1, 5.975, 16, 8.1], "texture": "#back"},
+				"west": {"uv": [0, 5.975, 15, 8.1], "texture": "#back"}
+			}
+		},
+		{
+			"name": "Background",
+			"from": [5.95, 7.25, 0],
+			"to": [10.05, 8.625, 14],
+			"faces": {
+				"east": {"uv": [1, 5.975, 16, 8.1], "texture": "#back"},
+				"west": {"uv": [0, 5.975, 15, 8.1], "texture": "#back"}
+			}
+		},
+		{
+			"name": "Background",
+			"from": [5.95, 5.6, 0],
+			"to": [10.05, 6.975, 14],
+			"faces": {
+				"east": {"uv": [1, 5.975, 16, 8.1], "texture": "#back"},
+				"west": {"uv": [0, 5.975, 15, 8.1], "texture": "#back"}
+			}
+		},
+		{
+			"name": "Background",
+			"from": [5.95, 3.95, 0],
+			"to": [10.05, 5.325, 14],
+			"faces": {
+				"east": {"uv": [1, 5.975, 16, 8.1], "texture": "#back"},
+				"west": {"uv": [0, 5.975, 15, 8.1], "texture": "#back"}
+			}
+		},
+		{
+			"from": [6, 11.25, 0],
+			"to": [10, 13.25, 15],
+			"faces": {
+				"east": {"uv": [0, 0, 16, 8], "texture": "#2"},
+				"south": {"uv": [6, 0, 10, 5], "texture": "#particle"},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#2"},
+				"up": {"uv": [6, 0, 10, 15], "texture": "#particle"}
+			}
+		}
+	]
+}
