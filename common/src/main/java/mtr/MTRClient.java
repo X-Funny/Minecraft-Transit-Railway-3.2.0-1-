@@ -4,6 +4,7 @@ import mtr.block.BlockPIDS1;
 import mtr.block.BlockPIDS2;
 import mtr.block.BlockPIDS3;
 import mtr.block.BlockPIDSUCENANLING;
+import mtr.block.BlockPIDSUCENANGANG;
 import mtr.block.BlockTactileMap;
 import mtr.client.ClientData;
 import mtr.client.Config;
